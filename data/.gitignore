@@ -1,0 +1,21 @@
+# Base de datos local (se creará nueva en la nube)
+data/ventas.db
+
+# Entorno virtual
+venv/
+env/
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# VS Code
+.vscode/
+
+# Sistema
+.DS_Store
+Thumbs.db
