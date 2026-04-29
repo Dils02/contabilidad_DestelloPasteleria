@@ -24,46 +24,88 @@ def aplicar_estilos():
         background-attachment: fixed;
     }
 
-    /* ══════════════════════════════════════
-       SIDEBAR
-    ══════════════════════════════════════ */
-    [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #0d6e5a 0%, #0f8a72 50%, #11a688 100%);
-        border-right: none;
-        box-shadow: 4px 0 20px rgba(0,0,0,0.15);
-    }
+/* ══════════════════════════════════════
+   SIDEBAR
+══════════════════════════════════════ */
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #0d6e5a 0%, #0f8a72 50%, #11a688 100%) !important;
+    border-right: none;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.15);
+}
 
-    [data-testid="stSidebar"] * {
-        color: #ffffff !important;
-    }
+[data-testid="stSidebar"] * {
+    color: #ffffff !important;
+}
 
-    [data-testid="stSidebar"] .stRadio label {
-        background: rgba(255,255,255,0.1);
-        border-radius: 10px;
-        padding: 10px 16px;
-        margin: 4px 0;
-        display: block;
-        transition: background 0.2s ease;
-        cursor: pointer;
-        font-weight: 500;
-    }
+[data-testid="stSidebar"] [data-testid="stMetric"] {
+    background: rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 12px;
+    margin: 6px 0;
+    border: 1px solid rgba(255,255,255,0.2);
+}
 
-    [data-testid="stSidebar"] .stRadio label:hover {
-        background: rgba(255,255,255,0.25);
-    }
+[data-testid="stSidebar"] [data-testid="stMetricValue"] {
+    font-size: 1.3rem !important;
+    font-weight: 700 !important;
+}
 
-    [data-testid="stSidebar"] [data-testid="stMetric"] {
-        background: rgba(255,255,255,0.12);
-        border-radius: 12px;
-        padding: 12px;
-        margin: 6px 0;
-        border: 1px solid rgba(255,255,255,0.2);
-    }
+/* Radio buttons — alineación */
+[data-testid="stSidebar"] .stRadio > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
 
-    [data-testid="stSidebar"] [data-testid="stMetricValue"] {
-        font-size: 1.3rem !important;
-        font-weight: 700 !important;
-    }
+[data-testid="stSidebar"] .stRadio > div > label {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 12px 16px !important;
+    margin: 0 !important;
+    width: 100% !important;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    transition: background 0.2s ease;
+}
+
+[data-testid="stSidebar"] .stRadio > div > label:hover {
+    background: rgba(255,255,255,0.25) !important;
+}
+
+[data-testid="stSidebar"] .stRadio > div > label > div:first-child {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    border-radius: 50% !important;
+    border: 2px solid rgba(255,255,255,0.6) !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0;
+}
+
+[data-testid="stSidebar"] .stRadio > div > label > div:last-child {
+    color: #ffffff !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+}
+
+[data-testid="stSidebar"] .stRadio > label {
+    color: rgba(255,255,255,0.7) !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+}
 
     /* ══════════════════════════════════════
        TÍTULOS
